@@ -1,0 +1,36 @@
+- Napraviti Application Usera za kojeg cemo imati permisije server/bin/add-user.sh
+- editovati web.xml
+	-obratiti paznju na 
+		- <url-pattern>
+		- <role-name>
+		- <auth-method>
+		- pageove
+		- <role>
+- obavezno page za login mora da ima
+		<FORM action="j_security_check" method="post">
+ Korisnicko ime: <INPUT type="text" name="j_username"><BR>
+ Lozinka: <INPUT type="password" name="j_password"><BR>
+ <INPUT type="submit" value="Send">
+</FORM>
+
+
+***Nisam siguran da li je izvrsavanje form based securitya uz angular jednostavno/moguce itd
+mozda neka redirekcija na login.jsp :D
+
+
+
+
+
+!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~!~
+
+OBRATI PAZNJU
+Ako se radi redirekcija pomocu
+
+
+RequestDispatcher requestDispatcher = request.getRequestDispatcher("../../show.jsp");
+		request.setAttribute("proizvodi", proizvodi);
+		requestDispatcher.forward(request, response);
+
+
+u standalone.xml
+	servlet-container dodati atribut allow-non-standard-wrappers="true"

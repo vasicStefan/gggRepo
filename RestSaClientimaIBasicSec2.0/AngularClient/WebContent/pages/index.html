@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<script src="../js/angular.min.js"></script>
+<script src="../js/angular-base64.min.js"></script>
+<script src="../js/primer.js"></script>
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div ng-app="myApp" ng-controller="myCtrl">
+	
+		<h1>{{odgovor}}</h1>
+		
+		<br>
+		
+		Malo drugaciji odgovor:<br>
+	<!-- 	<li ng-repeat="odg in odgovor">{{odg.naziv}}</li>
+		 -->
+		<form>
+			<input ng-model="sadrzaj">
+			<button type="submit" ng-click="posaljiPoruku()">posalji poruku</button>
+		</form>
+		
+	</div>
+
+
+</body>
+</html>
